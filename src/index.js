@@ -24,10 +24,11 @@ class Matting {
     reader.onload = (e) => {
       let src = e.target.result
       let img = new Image()
+      let o = this
       img.onload = () => {
         let w = img.width
         let h = img.height
-        this.fitch(w, h, img)
+        o.fitch(w, h, img)
       }
       img.src = src
     }
