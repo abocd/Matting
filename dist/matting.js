@@ -97,9 +97,12 @@ class Matting {
       let src = e.target.result;
       let img = new Image();
       img.src = src;
-      let w = img.width;
-      let h = img.height;
-      this.fitch(w, h, img);
+      var o = this;
+      img.onload = function(){
+          let w = img.width;
+          let h = img.height;
+          o.fitch(w, h, img);
+      }
     };
     reader.readAsDataURL(this.file);
   }
