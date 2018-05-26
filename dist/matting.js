@@ -97,7 +97,7 @@ class Matting {
       let src = e.target.result;
       let img = new Image();
       img.src = src;
-      var o = this;
+      let o = this;
       img.onload = function(){
           let w = img.width;
           let h = img.height;
